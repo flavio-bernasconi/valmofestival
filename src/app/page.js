@@ -1,103 +1,93 @@
-import Image from "next/image";
+import { BandCard } from "@/components/BandCard";
+import { Hero } from "@/components/Hero";
+import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
+import { cn } from "@/lib/utils";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className={cn("bg-slate-900", nunito.className)}>
+      <main className="overflow-hidden">
+        <Hero />
+        <div className="container mx-auto p-8 text-center">
+          <p className="text-8xl font-light text-white">Line up</p>
+          <p className="text-xl mb-6 font-medium text-slate-100">
+            inizio concerti 21:00
+          </p>
         </div>
+        <section
+          aria-labelledby="line-up"
+          className="p-8 mb-38 grid grid-cols-1 lg:grid-cols-2 min-xl:grid-cols-3 gap-18 mx-auto container min-h-[40vh] items-center"
+        >
+          <BandCard
+            cardBackground="bg-orange-200 -rotate-1"
+            darkColor="text-orange-950"
+            darkBorder="border-orange-950"
+            chipBackground="bg-orange-300"
+            main={{ name: "Di Maggio Connection", genre: "Post rock" }}
+            second={{ name: "There will be blood", genre: "Rockabilly" }}
+            date={{ weekDay: "Ven", number: 23, month: "Maggio" }}
+          />
+          <BandCard
+            cardBackground="bg-emerald-200 rotate-2"
+            darkColor="text-emerald-950"
+            darkBorder="border-emerald-950"
+            chipBackground="bg-emerald-400"
+            main={{ name: "Zero talents", genre: "Ska" }}
+            second={{ name: "The collywobbles", genre: "skapunk" }}
+            date={{ weekDay: "Sab", number: 24, month: "Maggio" }}
+          />
+          <BandCard
+            cardBackground="bg-indigo-200 -rotate-4"
+            darkColor="text-indigo-950"
+            darkBorder="border-indigo-950"
+            chipBackground="bg-indigo-400"
+            main={{ name: "Vintage violence", genre: "Synth rok trio" }}
+            second={{ name: "Pod pod talks", genre: "punk" }}
+            date={{ weekDay: "Dom", number: 25, month: "Maggio" }}
+          />
+        </section>{" "}
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-slate-200 py-10 rotate-4 mt-20">
+          <VelocityScroll className={"text-slate-800 uppercase max-md:tet-4xl"}>
+            Tanta Birra - Tanta Musica -{" "}
+          </VelocityScroll>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        </div>
+        <div className="container mx-auto p-8 text-center  mt-20">
+          <p className="text-8xl font-light text-slate-100">Cucina</p>
+          <p className="text-xl font-medium text-slate-100">
+            dalle 19 alle 22:30
+          </p>
+          <p className="text-xl mb-6 font-medium text-slate-600">
+            Domenica anche pranzo 12 - 14
+          </p>
+        </div>
+        <section aria-labelledby="cucina" className="p-8 container mx-auto">
+          <div className="flex gap-6 justify-center flex-col items-center ">
+            <div className="p-12 rounded-2xl max-w-md ">
+              <ul className="flex gap-4 flex-wrap items-center text-white">
+                <li className="text-6xl text-center w-full">Gnocchi</li>
+                <li className="text-6xl text-center w-full">Pizzoccheri</li>
+                <li className="text-6xl text-center w-full">Patatine</li>
+                <li className="text-6xl text-center w-full">Falafel</li>
+              </ul>
+            </div>
+            <div className="p-12 rounded-2xl max-w-md ">
+              <ul className="flex gap-4 flex-wrap items-center text-white">
+                <li className="text-6xl text-center w-full">Birra</li>
+                <li className="text-6xl text-center w-full">Birra</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section className="p-8 container mt-20 mx-auto">
+          <p className="text-center text-4xl font-black">Sponsor</p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <footer className=""></footer>
     </div>
   );
 }
