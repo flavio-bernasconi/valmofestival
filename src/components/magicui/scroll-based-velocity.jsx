@@ -70,7 +70,7 @@ function ParallaxText({ children, baseVelocity = 20, ...props }) {
   return (
     <div
       ref={containerRef}
-      className="w-full overflow-hidden whitespace-nowrap"
+      className="w-full overflow-hidden whitespace-nowrap text-5xl"
       {...props}
     >
       <motion.div className="inline-block" style={{ x }}>
@@ -94,7 +94,7 @@ export function VelocityScroll({
   return (
     <div
       className={cn(
-        "relative w-full text-8xl font-bold tracking-[-0.02em] md:text-7xl md:leading-[5rem]",
+        "relative w-full font-bold tracking-[-0.02em] md:leading-[5rem]",
         className
       )}
       {...props}
