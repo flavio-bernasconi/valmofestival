@@ -37,8 +37,9 @@ export const BandCard = ({
     >
       <div
         className={cn(
-          "absolute -top-5 left-1/2 transform bg-orange-300 -translate-x-1/2 py-1 px-4 rounded-full",
-          chipBackground
+          "absolute border-[1px] -top-7 left-1/2 transform bg-orange-300 -translate-x-1/2 py-2 px-8 rounded-full",
+          chipBackground,
+          darkBorder
         )}
       >
         <p
@@ -51,7 +52,7 @@ export const BandCard = ({
           <span className="font-bold text-4xl">{date.number}</span> {date.month}
         </p>
       </div>
-      <div className={cn("space-y-5", darkColor)}>
+      <div className={cn("space-y-8", darkColor)}>
         <div>
           <p className="text-6xl font-bold leading-14 tracking-[-4px]">
             {main.name}
@@ -96,6 +97,7 @@ export const BandCard = ({
             <SpotifyPlayer src={main.src} loaderClass={loaderClass} />
           )}
         </div>
+        <hr className={cn(darkBorder)} />
         <div>
           <p className="text-5xl font-semibold tracking-[-3px]">
             {second.name}
@@ -140,21 +142,25 @@ export const BandCard = ({
             <SpotifyPlayer src={second.src} loaderClass={loaderClass} />
           )}
         </div>
+
         {third && (
-          <div>
-            <p className="text-3xl font-semibold tracking-[-1px]">
-              {third.name}
-            </p>
-            <p
-              className={cn(
-                "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
-                darkColor,
-                darkBorder
-              )}
-            >
-              {third.genre}
-            </p>
-          </div>
+          <>
+            <hr className={cn(darkBorder)} />
+            <div>
+              <p className="text-3xl font-semibold tracking-[-1px]">
+                {third.name}
+              </p>
+              <p
+                className={cn(
+                  "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
+                  darkColor,
+                  darkBorder
+                )}
+              >
+                {third.genre}
+              </p>
+            </div>
+          </>
         )}
       </div>
     </motion.div>

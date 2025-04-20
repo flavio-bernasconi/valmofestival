@@ -1,7 +1,9 @@
 import { BandCard } from "@/components/BandCard";
 import { Hero } from "@/components/Hero";
 import { VelocityScroll } from "@/components/magicui/scroll-based-velocity";
+import { MenuAccordion } from "@/components/MenuAccordion";
 import { cn } from "@/lib/utils";
+import { Accordion } from "@radix-ui/react-accordion";
 import { Nunito } from "next/font/google";
 
 const nunito = Nunito({ subsets: ["latin"] });
@@ -42,12 +44,12 @@ export default function Home() {
             chipBackground="bg-orange-300"
             main={{
               name: "There will be blood",
-              genre: "Rockabilly",
+              genre: "Post rock",
               src: "https://open.spotify.com/embed/artist/1ntXPkk7nlvEGNgtHbKmAN?utm_source=generator",
             }}
             second={{
               name: "Di Maggio Connection",
-              genre: "Post rock",
+              genre: "Rockabilly",
               src: "https://open.spotify.com/embed/artist/3LCo398twp9ZnVaV9zd3Zt?utm_source=generator",
             }}
             third={{ name: "DJ Ghibli", genre: "DJ set" }}
@@ -61,12 +63,13 @@ export default function Home() {
             chipBackground="bg-emerald-300"
             main={{
               name: "The collywobbles",
-              genre: "skapunk",
+              genre: "Ska",
               src: "https://open.spotify.com/embed/artist/2lasUiHHJAnevYUJ0TJIxj?utm_source=generator",
             }}
             second={{
-              name: "Zero talents",
-              genre: "Ska",
+              name: "Zero talent",
+              genre: "skapunk",
+              src: "https://open.spotify.com/embed/artist/0g1bmXETrAwGrSkJ7O4y4C?utm_source=generator",
             }}
             third={{ name: "Djelso ft Lϋ", genre: "DJ set" }}
             date={{ weekDay: "Sab", number: 24, month: "Maggio" }}
@@ -79,12 +82,12 @@ export default function Home() {
             chipBackground="bg-indigo-300"
             main={{
               name: "Vintage violence",
-              genre: "Synth rok trio",
+              genre: "punk",
               src: "https://open.spotify.com/embed/artist/0WGMKokl5OoPCHeP8Beydm?utm_source=generator",
             }}
             second={{
               name: "Poo poo talks",
-              genre: "punk",
+              genre: "Synth rok trio",
               src: "https://open.spotify.com/embed/artist/761KtkhVLMz8XiDTDk23Qi?utm_source=generator",
             }}
             date={{ weekDay: "Dom", number: 25, month: "Maggio" }}
@@ -108,77 +111,70 @@ export default function Home() {
           </p>
         </div>
         <section aria-labelledby="cucina" className="p-8 container mx-auto">
-          <div className="flex gap-24 flex-col min-md:items-center">
+          <div className="flex gap-18 flex-col min-md:items-center">
             <div className="min-md:max-w-3xl w-full">
-              <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
-                primi
-              </p>
-              <ul className="flex flex-wrap text-white text-4xl gap-4">
-                <li className="w-full">
-                  GNOCCHI con ragù | pomodoro | burro & salvia | radicchio &
-                  zola
-                </li>
-                <li className="w-full">
-                  <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
-                    NOVITÀ
-                  </span>{" "}
-                  GNOCCHI con ricotta zucchine e menta
-                </li>
-                <li className="w-full">Zuppa di cipolle</li>
-              </ul>
-            </div>
-            <div className="min-md:max-w-3xl w-full">
-              <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
-                griglie
-              </p>
-              <ul className="flex flex-wrap text-white text-4xl gap-4">
-                <li className="w-full">Costine</li>
-                <li className="w-full">Pollo marinato</li>
-                <li className="w-full">Grigliata mista</li>
-                <li className="w-full">Tomino </li>
-                <li className="w-full">Panino con salamella</li>
-              </ul>
-            </div>
-            <div className="min-md:max-w-3xl w-full">
-              <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
-                contorni
-              </p>
-              <ul className="flex flex-wrap text-white text-4xl gap-4">
-                <li className="w-full">
-                  Patatine fritte | FANTAINSALATA | Cavolo rosso | Fagioli |
-                  Fagioli & cipolle
-                </li>
-              </ul>
-            </div>
-            <div className="min-md:max-w-3xl w-full">
-              <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
-                dolci casalinghi
-              </p>
-              <ul className="flex flex-wrap text-white text-4xl gap-4">
-                <li className="w-full">Salame di cioccolato</li>
-                <li className="w-full">
-                  <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
-                    NOVITÀ
-                  </span>{" "}
-                  crêpes
-                </li>
-              </ul>
-            </div>
-            <div className="min-md:max-w-3xl w-full">
-              <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
-                SPECIALI!
-              </p>
-              <ul className="flex flex-wrap text-white text-4xl gap-4">
-                <li className="w-full">
-                  <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
-                    NOVITÀ VEGAN
-                  </span>{" "}
-                  Falafel + contorno | panino falafel
-                </li>
-                <li className="w-full">
-                  DOMENICA a PRANZO polenta e ragù napoletano
-                </li>
-              </ul>
+              <Accordion type="single" collapsible className="space-y-8">
+                <MenuAccordion trigger={"primi"}>
+                  <ul className="flex flex-wrap text-white text-4xl gap-6">
+                    <li className="w-full">
+                      GNOCCHI con ragù | pomodoro | burro & salvia | radicchio &
+                      zola
+                    </li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">
+                      <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
+                        NOVITÀ
+                      </span>{" "}
+                      GNOCCHI con ricotta zucchine e menta
+                    </li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Zuppa di cipolle</li>
+                  </ul>
+                </MenuAccordion>
+                <MenuAccordion trigger={"griglie"}>
+                  <ul className="flex flex-wrap text-white text-4xl gap-4">
+                    <li className="w-full">Costine</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Pollo marinato</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Grigliata mista</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Tomino </li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Panino con salamella</li>
+                  </ul>
+                </MenuAccordion>
+                <MenuAccordion trigger={"contorni"}>
+                  <ul className="flex flex-wrap text-white text-4xl gap-4">
+                    <li className="w-full">
+                      Patatine fritte | FANTAINSALATA | Cavolo rosso | Fagioli |
+                      Fagioli & cipolle
+                    </li>
+                  </ul>
+                </MenuAccordion>
+                <MenuAccordion trigger={"dolci casalinghi"}>
+                  <ul className="flex flex-wrap text-white text-4xl gap-4">
+                    <li className="w-full">Salame di cioccolato</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">
+                      <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
+                        NOVITÀ
+                      </span>{" "}
+                      crêpes
+                    </li>
+                  </ul>
+                </MenuAccordion>
+                <MenuAccordion trigger={"SPECIALI!"}>
+                  <ul className="flex flex-wrap text-white text-4xl gap-4">
+                    <li className="w-full">
+                      <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
+                        NOVITÀ VEGAN
+                      </span>{" "}
+                      Falafel + contorno | panino falafel
+                    </li>
+                  </ul>
+                </MenuAccordion>
+              </Accordion>
             </div>
             <div className="min-md:max-w-3xl w-full">
               <p className="w-full uppercase text-3xl font-bold text-orange-400 mb-2">
@@ -245,7 +241,7 @@ export default function Home() {
           width="100%"
           height="500px"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </footer>
     </div>
