@@ -11,7 +11,7 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata = {
   title: "Valmofestival - 23/24/25 Maggio 2025",
   description:
-    "Il Valmofestival ritorna il 23/24/25 Maggio 2025, con la quindicesima edizione. Ci vediamo a Valmorea (Como) con tanta musica, cibo e molto altro. ",
+    "Il Valmofestival ritorna il 23/24/25 Maggio 2025, con la sedicesima edizione. Ci vediamo a Valmorea (Como) con tanta musica, cibo e molto altro.",
   keywords: [
     "Valmofestival",
     "valmorea",
