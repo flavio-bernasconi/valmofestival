@@ -212,7 +212,7 @@ export default function Home() {
                 <hr className="border-slate-700 h-1 w-full" />
                 <li className="w-full gap-3 flex flex-col items-start">
                   <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
-                    Specialie Km 0{" "}
+                    Speciale Km 0{" "}
                   </span>{" "}
                   Cantina Carbonera (Cavallasca)
                 </li>
