@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <motion.div className="h-[62vh] max-md:h-[67vh] w-full relative flex flex-col gap-4 px-18 max-md:px-8 pt-32 max-md:pt-16 mb-24 mx-auto overflow-hidden">
+    <motion.div className="h-[68vh] max-md:h-[73vh] w-full relative flex flex-col gap-4 px-18 max-md:px-8 pt-32 max-md:pt-16 mb-24 mx-auto overflow-hidden">
       <Image
         src="/tavolo.svg"
         alt="Beer illustration"

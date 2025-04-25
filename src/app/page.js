@@ -43,14 +43,14 @@ export default function Home() {
             darkBorder="border-orange-950"
             chipBackground="bg-orange-300"
             main={{
-              name: "There will be blood",
-              genre: "Post rock",
-              src: "https://open.spotify.com/embed/artist/1ntXPkk7nlvEGNgtHbKmAN?utm_source=generator",
-            }}
-            second={{
               name: "Di Maggio Connection",
               genre: "Rockabilly",
               src: "https://open.spotify.com/embed/artist/3LCo398twp9ZnVaV9zd3Zt?utm_source=generator",
+            }}
+            second={{
+              name: "There will be blood",
+              genre: "Post rock",
+              src: "https://open.spotify.com/embed/artist/1ntXPkk7nlvEGNgtHbKmAN?utm_source=generator",
             }}
             third={{ name: "DJ Ghibli", genre: "DJ set" }}
             date={{ weekDay: "Ven", number: 23, month: "Maggio" }}
@@ -62,16 +62,16 @@ export default function Home() {
             darkBorder="border-emerald-950"
             chipBackground="bg-emerald-300"
             main={{
-              name: "The collywobbles",
-              genre: "Ska",
-              src: "https://open.spotify.com/embed/artist/2lasUiHHJAnevYUJ0TJIxj?utm_source=generator",
-            }}
-            second={{
               name: "Zero talent",
               genre: "skapunk",
               src: "https://open.spotify.com/embed/artist/0g1bmXETrAwGrSkJ7O4y4C?utm_source=generator",
             }}
-            third={{ name: "Djelso ft Lϋ", genre: "DJ set" }}
+            second={{
+              name: "The collywobbles",
+              genre: "Ska",
+              src: "https://open.spotify.com/embed/artist/2lasUiHHJAnevYUJ0TJIxj?utm_source=generator",
+            }}
+            third={{ name: "Djelso", genre: "DJ set" }}
             date={{ weekDay: "Sab", number: 24, month: "Maggio" }}
             loaderClass="fill-emerald-900"
           />
@@ -117,15 +117,20 @@ export default function Home() {
                 <MenuAccordion trigger={"primi"}>
                   <ul className="flex flex-wrap text-white text-4xl gap-6">
                     <li className="w-full">
-                      GNOCCHI con ragù | pomodoro | burro & salvia | radicchio &
-                      zola
+                      GNOCCHI con
+                      <ul>
+                        <li>ragù </li>
+                        <li>pomodoro </li>
+                        <li>burro & salvia </li>
+                        <li>radicchio & zola </li>
+                      </ul>
                     </li>
                     <hr className="border-slate-700 h-1 w-full" />
-                    <li className="w-full">
+                    <li className="w-full flex flex-col items-start gap-4">
                       <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
                         NOVITÀ
                       </span>{" "}
-                      GNOCCHI con ricotta zucchine e menta
+                      GNOCCHI con ricotta, zucchine e menta
                     </li>
                     <hr className="border-slate-700 h-1 w-full" />
                     <li className="w-full">Zuppa di cipolle</li>
@@ -139,34 +144,39 @@ export default function Home() {
                     <hr className="border-slate-700 h-1 w-full" />
                     <li className="w-full">Grigliata mista</li>
                     <hr className="border-slate-700 h-1 w-full" />
-                    <li className="w-full">Tomino </li>
+                    <li className="w-full">Salamelle</li>
                     <hr className="border-slate-700 h-1 w-full" />
-                    <li className="w-full">Panino con salamella</li>
+                    <li className="w-full">Tomino </li>
                   </ul>
                 </MenuAccordion>
                 <MenuAccordion trigger={"contorni"}>
                   <ul className="flex flex-wrap text-white text-4xl gap-4">
-                    <li className="w-full">
-                      Patatine fritte | FANTAINSALATA | Cavolo rosso | Fagioli |
-                      Fagioli & cipolle
-                    </li>
+                    <li className="w-full">Patatine fritte</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Fantainsalata</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Cavolo rosso</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Fagioli</li>
+                    <hr className="border-slate-700 h-1 w-full" />
+                    <li className="w-full">Fagioli & cipolle</li>
                   </ul>
                 </MenuAccordion>
                 <MenuAccordion trigger={"dolci casalinghi"}>
                   <ul className="flex flex-wrap text-white text-4xl gap-4">
                     <li className="w-full">Salame di cioccolato</li>
                     <hr className="border-slate-700 h-1 w-full" />
-                    <li className="w-full">
+                    <li className="w-full flex items-center gap-4">
                       <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
                         NOVITÀ
                       </span>{" "}
-                      crêpes
+                      Crêpes
                     </li>
                   </ul>
                 </MenuAccordion>
                 <MenuAccordion trigger={"SPECIALI!"}>
                   <ul className="flex flex-wrap text-white text-4xl gap-4">
-                    <li className="w-full">
+                    <li className="w-full flex flex-col gap-3 items-start">
                       <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
                         NOVITÀ VEGAN
                       </span>{" "}
@@ -183,7 +193,7 @@ export default function Home() {
               <ul className="flex flex-wrap text-white text-4xl gap-4">
                 <li className="w-full">
                   Polenta e ragù napoletano{" "}
-                  <span className="text-xl"> (fino ad esaurimento scorte)</span>
+                  <span className="text-xl"> (fino ad esaurimento)</span>
                 </li>
               </ul>
             </div>
@@ -194,24 +204,28 @@ export default function Home() {
               </p>
               <ul className="flex flex-wrap text-white text-4xl gap-4">
                 <li className="w-full">
-                  Birrificio Italiano: TIPO PILS - BIBOK
+                  Birrificio Italiano: TIPO PILS - BIBOCK
                 </li>
                 <li className="w-full">
                   Birrificio Vetra: IPA Birra chiara Ganter
                 </li>
-                <li className="w-full gap-3 flex flex-wrap">
+                <hr className="border-slate-700 h-1 w-full" />
+                <li className="w-full gap-3 flex flex-col items-start">
                   <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
                     Specialie Km 0{" "}
                   </span>{" "}
-                  Cantina Carbonera (Cavallasca) - Merlot Vino rosso sfuso della
-                  casa (calice o bottiglia)
+                  Cantina Carbonera (Cavallasca)
                 </li>
+                <hr className="border-slate-700 h-1 w-full" />
+                <li className="w-full">Cantina Carbonera (Cavallasca)</li>
               </ul>
             </div>
           </div>
         </section>
         <div className="container mx-auto p-8 text-center mt-20">
-          <p className="text-8xl font-light text-slate-100 mb-12">Sponsor</p>
+          <p className="text-8xl font-light text-slate-100 mb-12 tracking-[-4px]">
+            Sponsor
+          </p>
           <p className="text-xl font-medium text-slate-100 flex gap-3 items-center justify-center">
             <svg
               aria-hidden="true"
@@ -235,7 +249,10 @@ export default function Home() {
           </p>
         </div>
       </main>
-      <footer className="mt-12">
+      <footer className="mt-12 container mx-auto  text-center">
+        <p className="text-white text-2xl mb-8 p-4">
+          Piazza G. da Caversaccio, 22070 Valmorea CO
+        </p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1111.2928128553654!2d8.928802529828724!3d45.812466797219756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDQ4JzQ1LjAiTiA4wrA1NSc0NS40IkU!5e0!3m2!1sit!2sit!4v1745061689635!5m2!1sit!2sit"
           width="100%"

@@ -54,51 +54,6 @@ export const BandCard = ({
       </div>
       <div className={cn("space-y-8", darkColor)}>
         <div>
-          <p className="text-6xl font-bold leading-14 tracking-[-4px]">
-            {main.name}
-          </p>
-          <div className="flex justify-between items-center mb-4">
-            <p
-              className={cn(
-                "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
-                darkColor,
-                darkBorder
-              )}
-            >
-              {main.genre}
-            </p>
-            {main.src && (
-              <>
-                <button
-                  className={cn(
-                    "text-sm border-[1px] font-semibold text-white px-2 py-1 rounded-lg flex gap-2 items-center cursor-pointer",
-                    darkColor,
-                    darkBorder
-                  )}
-                  onClick={() => {
-                    setOpenPlayer((prev) => ({
-                      ...prev,
-                      [main.name]: !prev[main.name],
-                    }));
-                  }}
-                >
-                  <AudioLinesIcon size={14} />
-                  Ascolta
-                  {openPlayer[main.name] ? (
-                    <ChevronUpIcon size={16} />
-                  ) : (
-                    <ChevronDownIcon size={16} />
-                  )}
-                </button>
-              </>
-            )}
-          </div>
-          {openPlayer[main.name] && (
-            <SpotifyPlayer src={main.src} loaderClass={loaderClass} />
-          )}
-        </div>
-        <hr className={cn(darkBorder)} />
-        <div>
           <p className="text-5xl font-semibold tracking-[-3px]">
             {second.name}
           </p>
@@ -142,7 +97,51 @@ export const BandCard = ({
             <SpotifyPlayer src={second.src} loaderClass={loaderClass} />
           )}
         </div>
-
+        <hr className={cn(darkBorder)} />
+        <div>
+          <p className="text-6xl font-bold leading-14 tracking-[-4px]">
+            {main.name}
+          </p>
+          <div className="flex justify-between items-center mb-4">
+            <p
+              className={cn(
+                "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
+                darkColor,
+                darkBorder
+              )}
+            >
+              {main.genre}
+            </p>
+            {main.src && (
+              <>
+                <button
+                  className={cn(
+                    "text-sm border-[1px] font-semibold text-white px-2 py-1 rounded-lg flex gap-2 items-center cursor-pointer",
+                    darkColor,
+                    darkBorder
+                  )}
+                  onClick={() => {
+                    setOpenPlayer((prev) => ({
+                      ...prev,
+                      [main.name]: !prev[main.name],
+                    }));
+                  }}
+                >
+                  <AudioLinesIcon size={14} />
+                  Ascolta
+                  {openPlayer[main.name] ? (
+                    <ChevronUpIcon size={16} />
+                  ) : (
+                    <ChevronDownIcon size={16} />
+                  )}
+                </button>
+              </>
+            )}
+          </div>
+          {openPlayer[main.name] && (
+            <SpotifyPlayer src={main.src} loaderClass={loaderClass} />
+          )}
+        </div>
         {third && (
           <>
             <hr className={cn(darkBorder)} />
