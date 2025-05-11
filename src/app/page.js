@@ -208,7 +208,7 @@ export default function Home() {
                   Birrificio Italiano: TIPO PILS - BIBOCK
                 </li>
                 <li className="w-full">
-                  Birrificio Vetra: IPA Birra chiara Ganter
+                  Birrificio Vetra: IPA - Birra chiara Ganter
                 </li>
                 <hr className="border-slate-700 h-1 w-full" />
                 <li className="w-full gap-3 flex flex-col items-start">
@@ -217,8 +217,6 @@ export default function Home() {
                   </span>{" "}
                   Cantina Carbonera (Cavallasca)
                 </li>
-                <hr className="border-slate-700 h-1 w-full" />
-                <li className="w-full">Cantina Carbonera (Cavallasca)</li>
               </ul>
             </div>
           </div>
@@ -227,8 +225,8 @@ export default function Home() {
           <p className="text-8xl font-light text-slate-100 mb-12 tracking-[-4px]">
             Sponsor
           </p>
-          <Sponsor />
         </div>
+        <Sponsor />
       </main>
       <footer className="mt-12 container mx-auto  text-center">
         <p className="text-white text-2xl mb-8 p-4">

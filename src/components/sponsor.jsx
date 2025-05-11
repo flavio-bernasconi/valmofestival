@@ -18,17 +18,20 @@ const sponsors = [
   },
   { src: 'Comabikes&s.png', alt: 'Comabikes' },
   { src: 'EURO MED.jpeg', alt: 'EURO MED' },
-  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' },
-  { src: 'FORMICA GARAGE.jpg', alt: 'Formica Garage' },
-  { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
-  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' },
-  { src: 'KASANOVA.jpg', alt: 'KASANOVA' }
+  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' }
 ]
 
 const sponsors2 = [
   { src: 'Kame House_page-0001.jpg', alt: 'Kame House' },
   { src: 'La Vecchia Filanda.png', alt: 'La Vecchia Filanda' },
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
+  { src: 'FORMICA GARAGE.jpg', alt: 'Formica Garage' },
+  { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
+  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' },
+  { src: 'KASANOVA.jpg', alt: 'KASANOVA' }
+]
+
+const sponsors3 = [
   { src: 'Osteria del gatto_page-0001.jpg', alt: 'Osteria del Gatto' },
   { src: 'Ottica Marilin-120.jpg', alt: 'Ottica Marilin' },
   { src: 'PROFUMO DI EVA.jpg', alt: 'Profumo di Eva' },
@@ -42,6 +45,7 @@ export default function Sponsor() {
   // Shuffle sponsors each render
   const shuffledSponsors = shuffleArray(sponsors)
   const shuffledSponsors2 = shuffleArray(sponsors2)
+  const shuffledSponsors3 = shuffleArray(sponsors3)
 
   return (
     <div className=' p-4'>
@@ -58,6 +62,17 @@ export default function Sponsor() {
       </Marquee>
       <Marquee direction='right' pauseOnClick>
         {shuffledSponsors2.map((sponsor, index) => (
+          <div key={index} className='p-4'>
+            <img
+              src={`/sponsor/${sponsor.src}`}
+              alt={sponsor.alt}
+              className='w-[300px] h-[300px] object-contain rounded-lg'
+            />
+          </div>
+        ))}
+      </Marquee>
+      <Marquee pauseOnClick>
+        {shuffledSponsors3.map((sponsor, index) => (
           <div key={index} className='p-4'>
             <img
               src={`/sponsor/${sponsor.src}`}
