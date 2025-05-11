@@ -181,7 +181,7 @@ export default function Home() {
                       <span className="text-xl font-bold bg-orange-400 text-white px-2 py-1 rounded-md">
                         NOVITÀ VEGAN
                       </span>{" "}
-                      Falafel + contorno | panino falafel
+                      Falafel + contorno | Falafel
                     </li>
                   </ul>
                 </MenuAccordion>
