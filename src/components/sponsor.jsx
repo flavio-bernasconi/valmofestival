@@ -18,7 +18,8 @@ const sponsors = [
   },
   { src: 'Comabikes&s.png', alt: 'Comabikes' },
   { src: 'EURO MED.jpeg', alt: 'EURO MED' },
-  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' }
+  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' },
+  { src: 'Cantoni Tours.jpg', alt: 'Cantoni Tours' }
 ]
 
 const sponsors2 = [
@@ -27,8 +28,7 @@ const sponsors2 = [
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
   { src: 'FORMICA GARAGE.jpg', alt: 'Formica Garage' },
   { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
-  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' },
-  { src: 'KASANOVA.jpg', alt: 'KASANOVA' }
+  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' }
 ]
 
 const sponsors3 = [
@@ -36,9 +36,15 @@ const sponsors3 = [
   { src: 'Ottica Marilin-120.jpg', alt: 'Ottica Marilin' },
   { src: 'PROFUMO DI EVA.jpg', alt: 'Profumo di Eva' },
   { src: 'RF GARDEN.jpg', alt: 'RF Garden' },
-  { src: 'Serramenti milani.png', alt: 'Serramenti Milan' },
+  { src: 'Serramenti milani.png', alt: 'Serramenti Milan' }
+]
+
+const sponsors4 = [
   { src: 'Studio Postural.png', alt: 'Studio Postural' },
-  { src: 'VANITY.jpg', alt: 'VANITY' }
+  { src: 'VANITY.jpg', alt: 'VANITY' },
+  { src: 'AMICA NATURA farmacia valmofestival (1).jpg', alt: 'Amica Natura' },
+  { src: 'OtticaZago.jpg', alt: 'Ottica Zago' },
+  { src: 'Tabaccheria_Dany.jpg', alt: 'Tabaccheria Dany' }
 ]
 
 export default function Sponsor() {
@@ -46,6 +52,7 @@ export default function Sponsor() {
   const shuffledSponsors = shuffleArray(sponsors)
   const shuffledSponsors2 = shuffleArray(sponsors2)
   const shuffledSponsors3 = shuffleArray(sponsors3)
+  const shuffledSponsors4 = shuffleArray(sponsors4)
 
   return (
     <div className=' p-4'>
@@ -73,6 +80,17 @@ export default function Sponsor() {
       </Marquee>
       <Marquee pauseOnClick>
         {shuffledSponsors3.map((sponsor, index) => (
+          <div key={index} className='p-4'>
+            <img
+              src={`/sponsor/${sponsor.src}`}
+              alt={sponsor.alt}
+              className='w-[300px] h-[300px] object-contain rounded-lg'
+            />
+          </div>
+        ))}
+      </Marquee>
+      <Marquee pauseOnClick direction='right'>
+        {shuffledSponsors4.map((sponsor, index) => (
           <div key={index} className='p-4'>
             <img
               src={`/sponsor/${sponsor.src}`}
