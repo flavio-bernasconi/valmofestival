@@ -11,19 +11,17 @@ const shuffleArray = array => {
 }
 
 const sponsors = [
-  { src: 'Andrelab.jpg', alt: 'Andrelab' },
   {
     src: 'Chiacchiere da Caffè - Maddalena Solbiate.jpg',
     alt: 'Chiacchiere da Caffè'
   },
   { src: 'Comabikes&s.png', alt: 'Comabikes' },
   { src: 'EURO MED.jpeg', alt: 'EURO MED' },
-  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' },
-  { src: 'Cantoni Tours.jpg', alt: 'Cantoni Tours' }
+  { src: 'Cantoni Tours.jpg', alt: 'Cantoni Tours' },
+  { src: 'Kame House_page-0001.jpg', alt: 'Kame House' }
 ]
 
 const sponsors2 = [
-  { src: 'Kame House_page-0001.jpg', alt: 'Kame House' },
   { src: 'La Vecchia Filanda.png', alt: 'La Vecchia Filanda' },
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
   { src: 'FORMICA GARAGE.jpg', alt: 'Formica Garage' },
@@ -33,15 +31,15 @@ const sponsors2 = [
 
 const sponsors3 = [
   { src: 'Osteria del gatto_page-0001.jpg', alt: 'Osteria del Gatto' },
-  { src: 'Ottica Marilin-120.jpg', alt: 'Ottica Marilin' },
   { src: 'PROFUMO DI EVA.jpg', alt: 'Profumo di Eva' },
   { src: 'RF GARDEN.jpg', alt: 'RF Garden' },
-  { src: 'Serramenti milani.png', alt: 'Serramenti Milan' }
+  { src: 'Serramenti milani.png', alt: 'Serramenti Milan' },
+  { src: 'Formica Garage.jpeg', alt: 'Formica Garage' }
 ]
 
 const sponsors4 = [
+  { src: 'Kasanova.png', alt: 'Kasanova' },
   { src: 'Studio Postural.png', alt: 'Studio Postural' },
-  { src: 'VANITY.jpg', alt: 'VANITY' },
   { src: 'AMICA NATURA farmacia valmofestival (1).jpg', alt: 'Amica Natura' },
   { src: 'OtticaZago.jpg', alt: 'Ottica Zago' },
   { src: 'Tabaccheria_Dany.jpg', alt: 'Tabaccheria Dany' }
