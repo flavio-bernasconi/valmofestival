@@ -28,7 +28,8 @@ const sponsors2 = [
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
   { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
   { src: 'Grotte del sale.png', alt: 'Grotte del Sale' },
-  { src: 'VANITY.jpg', alt: 'VANITY' }
+  { src: 'VANITY.jpg', alt: 'VANITY' },
+  { src: 'Andrelab.jpg', alt: 'Andrelab' }
 ]
 
 const sponsors3 = [
