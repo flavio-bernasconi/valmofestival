@@ -16,6 +16,8 @@ const sponsors = [
     alt: 'Chiacchiere da Caffè'
   },
   { src: 'Comabikes&s.png', alt: 'Comabikes' },
+  { src: 'Studio Bianco.jpg', alt: 'Comabikes' },
+
   { src: 'EURO MED.jpeg', alt: 'EURO MED' },
   { src: 'Cantoni Tours.jpg', alt: 'Cantoni Tours' },
   { src: 'Kame House_page-0001.jpg', alt: 'Kame House' }
@@ -24,9 +26,9 @@ const sponsors = [
 const sponsors2 = [
   { src: 'La Vecchia Filanda.png', alt: 'La Vecchia Filanda' },
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
-  { src: 'FORMICA GARAGE.jpg', alt: 'Formica Garage' },
   { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
-  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' }
+  { src: 'Grotte del sale.png', alt: 'Grotte del Sale' },
+  { src: 'VANITY.jpg', alt: 'VANITY' }
 ]
 
 const sponsors3 = [
@@ -34,10 +36,12 @@ const sponsors3 = [
   { src: 'PROFUMO DI EVA.jpg', alt: 'Profumo di Eva' },
   { src: 'RF GARDEN.jpg', alt: 'RF Garden' },
   { src: 'Serramenti milani.png', alt: 'Serramenti Milan' },
-  { src: 'Formica Garage.jpeg', alt: 'Formica Garage' }
+  { src: 'Formica Garage.jpeg', alt: 'Formica Garage' },
+  { src: 'Enoteca Gusto Uggiate.jpg', alt: 'Enoteca Gusto' }
 ]
 
 const sponsors4 = [
+  { src: 'Ottica Marilin-120.jpg', alt: 'Ottica Marilin' },
   { src: 'Kasanova.png', alt: 'Kasanova' },
   { src: 'Studio Postural.png', alt: 'Studio Postural' },
   { src: 'AMICA NATURA farmacia valmofestival (1).jpg', alt: 'Amica Natura' },
