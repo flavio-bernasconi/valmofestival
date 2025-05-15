@@ -208,7 +208,10 @@ export default function Home() {
                   Birrificio Italiano: TIPO PILS - BIBOCK
                 </li>
                 <li className="w-full">
-                  Birrificio Vetra: IPA - Birra chiara Ganter
+                  Birrificio Vetra: IPA - Birra chiara
+                </li>
+                <li className="w-full">
+                  Birrificio Ganter: Badish Hell
                 </li>
                 <hr className="border-slate-700 h-1 w-full" />
                 <li className="w-full gap-3 flex flex-col items-start">
