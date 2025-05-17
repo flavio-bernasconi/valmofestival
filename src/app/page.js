@@ -6,6 +6,7 @@ import Sponsor from "@/components/sponsor";
 import { cn } from "@/lib/utils";
 import { Accordion } from "@radix-ui/react-accordion";
 import { Nunito } from "next/font/google";
+import Head from "next/head";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -23,8 +24,10 @@ export const metadata = {
 };
 
 export default function Home() {
-  return (
-    // <div className={cn("bg-[#19262c]", nunito.className)}>
+  return (<>
+    <Head>
+      <meta name="google" content="notranslate" />
+    </Head>
     <div className={cn("bg-slate-900 notranslate", nunito.className)}>
       <main className="overflow-hidden">
         <Hero />
@@ -243,6 +246,6 @@ export default function Home() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </footer>
-    </div>
-  );
+    </div></>
+  )
 }
