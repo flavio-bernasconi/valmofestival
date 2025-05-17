@@ -25,7 +25,7 @@ export const metadata = {
 export default function Home() {
   return (
     // <div className={cn("bg-[#19262c]", nunito.className)}>
-    <div className={cn("bg-slate-900", nunito.className)}>
+    <div className={cn("bg-slate-900 notranslate", nunito.className)}>
       <main className="overflow-hidden">
         <Hero />
         <div className="container mx-auto p-8 text-center">
