@@ -24,6 +24,7 @@ const sponsors = [
 ]
 
 const sponsors2 = [
+  { src: 'plaza.jpg', alt: 'Bar Plaza' },
   { src: 'La Vecchia Filanda.png', alt: 'La Vecchia Filanda' },
   { src: 'Lucia Galli Fisioterapista Valmofestival.jpg', alt: 'Lucia Galli' },
   { src: 'Farmacia S Agata_page-0001.jpg', alt: 'Farmacia S Agata' },
