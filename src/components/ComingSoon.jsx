@@ -27,7 +27,7 @@ export const ComingSoonHero = () => {
             </p>
             <span className="text-slate-700">|</span>
             <p className="font-bold grid place-content-center">
-              25
+              24
               <span className="h-1 w-full bg-[#D3402B] rounded-3xl" />
             </p>
           </div>
