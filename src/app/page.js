@@ -41,7 +41,7 @@ export default function Home() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        <Link href="/archive/2024" className=" my-4 block" target="_blank" >Vai all'archivio</Link>
+        <Link href="/archive/2024" className=" my-4 block" target="_blank" >Vai all&apos;archivio</Link>
       </footer>
     </div></>
   )
