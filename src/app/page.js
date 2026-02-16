@@ -26,9 +26,9 @@ export default function Home() {
     <Head>
       <meta name="google" content="notranslate" />
     </Head>
-    <div className={cn("bg-[#F9EBD2] notranslate", nunito.className)}>
+    <div className={cn("bg-[#ecf6fd] notranslate", nunito.className)}>
 
-      <ComingSoonHero/>
+      <ComingSoonHero />
 
       <footer className="mt-12 container mx-auto  text-center">
         <p className=" text-2xl mb-8 p-4">
