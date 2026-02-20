@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { PostHogProvider } from "@/providers/PosthogProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,14 @@ const customFont = localFont({
   src: "../../public/fonts/Custom.otf",
   variable: "--font-custom",
 });
+const loreFont = localFont({
+  src: "../../public/fonts/LORE-Regular.ttf",
+  variable: "--font-lore",
+});
+const loreFontBold = localFont({
+  src: "../../public/fonts/LORE-Bold.ttf",
+  variable: "--font-lore-bold",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -26,9 +35,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${customFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${customFont.variable} ${loreFont.variable} ${loreFontBold.variable} antialiased`}
       >
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );
