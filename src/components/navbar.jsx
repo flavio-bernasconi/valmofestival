@@ -68,7 +68,7 @@ export const Navbar = () => {
       </div>
 
       {/* Menu Links */}
-      <div className="flex justify-between py-2">
+      <div className="flex justify-between py-3">
         {menuItems.map((item, index) => (
           <a
             key={item.href}

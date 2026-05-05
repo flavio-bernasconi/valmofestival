@@ -12,9 +12,9 @@ export const MenuSection = ({ images, children }) => {
   });
 
   // Individual "wavy" transforms for each image
-  const wave1 = useTransform(scrollYProgress, [0, 0.5, 1], [-10, 20, -40]);
-  const wave2 = useTransform(scrollYProgress, [0, 0.5, 1], [0, 60, 20]);
-  const wave3 = useTransform(scrollYProgress, [0, 0.5, 1], [10, 30, 40]);
+  const wave1 = useTransform(scrollYProgress, [0, 0.5, 1], [-10, 80, 90]);
+  const wave2 = useTransform(scrollYProgress, [0, 0.5, 1], [0, 70, 60]);
+  const wave3 = useTransform(scrollYProgress, [0, 0.5, 1], [10, 80, 100]);
 
   const waves = [wave1, wave2, wave3];
 

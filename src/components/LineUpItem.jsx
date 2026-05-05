@@ -22,9 +22,9 @@ export const LineUpItem = ({
           rotate: [-5, 5, 0, -5, 5, 0],
         }}
         transition={{
-          duration: randomInteger(2, 4),
+          duration: randomInteger(1, 5),
           repeat: Infinity,
-          repeatDelay: randomInteger(1, 3),
+          repeatDelay: randomInteger(1, 5),
           ease: "easeInOut",
         }}
       >

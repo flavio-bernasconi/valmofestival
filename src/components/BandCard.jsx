@@ -59,10 +59,10 @@ export const BandCard = ({
           <p className="text-3xl lg:text-4xl font-semibold tracking-[-3px]">
             {second.name}
           </p>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 mt-2 gap-2">
             <p
               className={cn(
-                "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
+                "text-lg border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
                 darkColor,
                 darkBorder,
               )}
@@ -106,10 +106,10 @@ export const BandCard = ({
               <p className="text-4xl font-semibold tracking-[-3px]">
                 {third.name}
               </p>
-              <div className="flex justify-between items-center mb-4">
+              <div className="flex justify-between items-center mb-4 mt-2 gap-2">
                 <p
                   className={cn(
-                    "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
+                    "text-lg border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
                     darkColor,
                     darkBorder,
                   )}
@@ -153,10 +153,10 @@ export const BandCard = ({
           <p className="text-5xl lg:text-6xl font-bold leading-14 tracking-[-4px]">
             {main.name}
           </p>
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4 mt-2 gap-2">
             <p
               className={cn(
-                "text-lg mt-2 border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
+                "text-lg border-[1px] bg-orange-50 w-fit py-0 px-4 rounded-full",
                 darkColor,
                 darkBorder,
               )}

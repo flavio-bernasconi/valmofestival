@@ -23,7 +23,7 @@ export function SpinningText({
   style,
   className,
   reverse = false,
-  radius = 5,
+  radius = 4,
   transition,
   variants,
 }) {
@@ -92,7 +92,7 @@ export function SpinningText({
           {letter}
         </motion.span>
       ))}
-      <span className="h-4 w-4 bg-orange-600 rounded-full absolute left-1/2 top-1/2 transform -translate-1/2" />
+      <span className="h-4 w-4 bg-[#ff5678] rounded-full absolute left-1/2 top-1/2 transform -translate-1/2" />
       <span className="sr-only">{children}</span>
     </motion.div>
   );

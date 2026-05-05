@@ -19,63 +19,65 @@ const menu = [
   {
     section: "Primi",
     items: [
-      {
-        name: "Gnocchi al ragù",
-        tag: "veg",
-      },
-      { name: "Gnocchi al pomodoro" },
-      { name: "Gnocchi burro & salvia" },
-      { name: "Gnocchi con radicchio & zola" },
-      {
-        name: "Zuppa di cipolle",
-        tag: "veg",
-      },
-    ],
-  },
-  {
-    section: "Secondi",
-    items: [
-      {
-        name: "Costine",
-      },
-      {
-        name: "Pollo marinato",
-      },
-      {
-        name: "Grigliata mista",
-      },
-      {
-        name: "Salamella",
-      },
-      {
-        name: "Tomino",
-        tag: "veg",
-      },
+      { name: "Gnocchi al pomodoro", tag: "veg", price: 6 },
+      { name: "Gnocchi burro & salvia", tag: "veg", price: 6 },
+      { name: "Gnocchi al ragù di carne", price: 8 },
+      { name: "Gnocchi gorgonzola, radicchio e noci", tag: "veg", price: 8 },
+      { name: "Gnocchi taleggio, barbabietola e noci", tag: "veg", price: 7 },
     ],
   },
   {
     section: "Contorni",
     items: [
+      { name: "Fanta insalata", tag: "veg", price: 5 },
+      { name: "Insalata di cavolo rosso", tag: "veg", price: 4 },
+      { name: "Fagioli con o senza cipolle", tag: "veg", price: 3.5 },
+    ],
+  },
+  {
+    section: "Fritti",
+    items: [
+      { name: "Patatine fritte", tag: "veg", price: 3.5 },
+      { name: "Piatto Falafel con salsa yogurt alla menta", tag: "veg", price: 5 },
       {
-        name: "Patatine fritte",
+        name: "Piatto Falafel con salsa yogurt alla menta + contorno",
         tag: "veg",
+        price: 7.5,
       },
+    ],
+  },
+  {
+    section: "Griglia",
+    items: [
+      { name: "Grigliata mista", price: 15 },
+      { name: "Polli marinati", price: 7.5 },
+      { name: "Costine", price: 9.5 },
+      { name: "Salamella (con o senza panino)", price: 4 },
+      { name: "Tomino", tag: "veg", price: 4 },
+      { name: "Tomino con contorno", tag: "veg", price: 6.5 },
+    ],
+  },
+  {
+    section: "Piatti Speciali",
+    items: [
+      { name: "Zuppa di cipolle", tag: "veg", price: 7 },
+      { name: "Frisella con hummus e pomodorini", tag: "veg", price: 6 },
+    ],
+  },
+  {
+    section: "Siluro Carpiato",
+    items: [
       {
-        name: "Fantainsalata",
-        tag: "veg",
+        name: "Tranci di pesce siluro in carpione con insalata di patate e cetrioli",
+        price: 12,
       },
-      {
-        name: "Cavolo rosso",
-        tag: "veg",
-      },
-      {
-        name: "Fagioli",
-        tag: "veg",
-      },
-      {
-        name: "Fagioli & cipolle",
-        tag: "veg",
-      },
+    ],
+  },
+  {
+    section: "Dolci",
+    items: [
+      { name: "Crepes", tag: "veg", price: 4.5 },
+      { name: "Salame di cioccolato", tag: "veg", price: 4 },
     ],
   },
 ];
@@ -130,7 +132,15 @@ export default function Menu() {
     }
   };
 
-  const sections = ["Primi", "Secondi", "Contorni"];
+  const sections = [
+    "Primi",
+    "Contorni",
+    "Fritti",
+    "Griglia",
+    "Piatti Speciali",
+    "Siluro Carpiato",
+    "Dolci",
+  ];
 
   return (
     <div
@@ -186,6 +196,14 @@ export default function Menu() {
                             )}
                             {item.name}
                           </h3>
+                          {item.price && (
+                            <span className="text-[#ff5678] font-big-custom text-xl">
+                              {item.price.toLocaleString("it-IT", {
+                                minimumFractionDigits: 1,
+                              })}{" "}
+                              €
+                            </span>
+                          )}
                         </div>
 
                         {!item.options && (
