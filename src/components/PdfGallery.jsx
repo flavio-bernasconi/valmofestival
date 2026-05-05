@@ -77,7 +77,9 @@ export default function PdfGallery() {
               <div className="p-4 bg-white border-top border-slate-100 flex justify-center">
                 <a
                   href={file.url}
-                  download
+                  download="Menu_Valmofestival_2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-[#ff5678] text-white px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform"
                 >
                   Scarica PDF
