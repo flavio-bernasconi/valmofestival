@@ -38,7 +38,7 @@ const sponsorsList = [
   { src: "OtticaZago.jpg", alt: "Ottica Zago" },
   { src: "Tabaccheria_Dany.jpg", alt: "Tabaccheria Dany" },
   // New Additions
-  { src: "7s giò.webp", alt: "7s giò" },
+  { src: "gio.webp", alt: "7s giò" },
   { src: "BASIGLIOTTI.jpg", alt: "Basigliotti" },
   { src: "BONNE VIE.webp", alt: "Bonne Vie" },
   { src: "Bar Polisportiva.jpg", alt: "Bar Polisportiva" },
@@ -51,7 +51,7 @@ const sponsorsList = [
   { src: "Stefanetti.webp", alt: "Stefanetti" },
   { src: "Fattoria-delle-emozioni.webp", alt: "Fattoria delle emozioni " },
   { src: "LA FABBRICA DEL PANE.webp", alt: "LA FABBRICA DEL PANE" },
-  { src: "Kimeru.webp", alt: "Kimeru" },
+  { src: "kimeru.webp", alt: "Kimeru" },
   { src: "kama.png", alt: "Kamaleonte" },
 ];
 
