@@ -11,7 +11,7 @@ export default function PdfGallery() {
     id: "menu-2026",
     title: "Menù Valmofestival 2026",
     url: "/menu.pdf",
-    thumb: "/preview-menu.jpg",
+    thumb: "/menu-preview.webp",
   };
 
   return (
@@ -20,7 +20,7 @@ export default function PdfGallery() {
       <motion.div
         layoutId={file.id}
         onClick={() => setSelectedId(file.id)}
-        className="w-64 cursor-pointer group relative "
+        className="w-[380px] cursor-pointer group relative "
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.05 }}
