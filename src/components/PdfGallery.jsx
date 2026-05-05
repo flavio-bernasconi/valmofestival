@@ -34,7 +34,7 @@ export default function PdfGallery() {
           />
         </div>
         <motion.div className="bg-[#ff5678] z-10 w-fit mx-auto mt-2 text-white px-4 py-2 rounded-full font-bold shadow-lg transition-colors">
-          Apri Menù
+          Apri menù completo
         </motion.div>
       </motion.div>
 

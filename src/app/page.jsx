@@ -10,6 +10,7 @@ import { Navbar } from "@/components/navbar";
 import { SpinningText } from "@/components/magicui/spinning-text";
 import Marquee from "react-fast-marquee";
 import PdfGallery from "@/components/PdfGallery";
+import { Beers } from "@/components/Beers";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -155,6 +156,7 @@ export default function Home() {
             Menù
           </p>
           <PdfGallery />
+          <Beers />
         </div>
         {/* Mobile Marquee */}
         <div className=" mt-16">
