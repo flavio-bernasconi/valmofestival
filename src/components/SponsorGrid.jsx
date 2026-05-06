@@ -53,6 +53,7 @@ const sponsorsList = [
   { src: "LA FABBRICA DEL PANE.webp", alt: "LA FABBRICA DEL PANE" },
   { src: "kimeru.webp", alt: "Kimeru" },
   { src: "kama.png", alt: "Kamaleonte" },
+  { src: "acqua.webp", alt: "Acqua dulza" },
 ];
 
 console.log(Object.values(sponsorsList).map((sponsor) => sponsor.alt));
