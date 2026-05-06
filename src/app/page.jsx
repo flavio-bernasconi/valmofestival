@@ -236,8 +236,8 @@ export default function Home() {
           <div className="flex flex-col gap-1">
             <p className="mb-6 font-bold">Info utili</p>
             <p>
-              Cucine aperte tutte le sere dalle 19:00 circa, la domenica anche a
-              pranzo su prenotazione
+              Le cucine aprono tutte le sere dalle 19:00. La domenica anche a
+              pranzo dalle 12:00 (prenotazione consigliata).
             </p>
             <hr />
             <p>I concerti inizieranno intorno alle 21:00</p>
