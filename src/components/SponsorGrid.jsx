@@ -54,6 +54,7 @@ const sponsorsList = [
   { src: "kimeru.webp", alt: "Kimeru" },
   { src: "kama.png", alt: "Kamaleonte" },
   { src: "acqua.webp", alt: "Acqua dulza" },
+  { src: "margherita.webp", alt: "Margherita flowers" },
 ];
 
 console.log(Object.values(sponsorsList).map((sponsor) => sponsor.alt));
