@@ -20,6 +20,7 @@ const sponsorsList = [
   { src: "La Vecchia Filanda.png", alt: "La Vecchia Filanda" },
   { src: "Lucia Galli Fisioterapista Valmofestival.jpg", alt: "Lucia Galli" },
   { src: "Farmacia S Agata_page-0001.jpg", alt: "Farmacia S Agata" },
+  { src: "Farmacia_ago.png", alt: "Farmacia Agostinelli" },
   { src: "Grotte del sale.png", alt: "Grotte del Sale" },
   { src: "VANITY.jpg", alt: "VANITY" },
   { src: "Andrelab.jpg", alt: "Andrelab" },
